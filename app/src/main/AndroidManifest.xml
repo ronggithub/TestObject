@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baidu.searchbox" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- getUID/PID -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".BaseActivity"
+            android:launchMode="singleTask"
+            android:configChanges="navigation|screenSize"
+            android:description="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+
+
+        <activity
+            android:name=".ThirdActivity"
+            android:launchMode="singleTask"
+            android:configChanges="navigation|screenSize"
+            android:description="@string/app_name"
+            android:taskAffinity=".third"
+            android:process=":com.baidu.searchbox.third"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+
+
+        <activity android:name=".AppTargetActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleTop"
+            >
+        </activity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </application>
+
+</manifest>

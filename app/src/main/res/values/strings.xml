@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="apptargetbt">查看系统应用Target</string>
+</resources>
